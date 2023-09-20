@@ -26,14 +26,14 @@ pipeline {
                 }
             }  
         }
-        // stage ('Build docker image') {
-        //     steps {
-        //         script {
-        //             echo 'Building docker image'
-        //                     sh "docker build -t shivanishivani/clinic09:$BUILD_NUMBER ."
-        //              }
-        //         }
-        // }  
+        stage ('Build docker image') {
+            steps {
+                script {
+                    echo 'Building docker image'
+                            sh "docker build -t dangeo36/part2_petclinic:$BUILD_NUMBER ."
+                     }
+                }
+        }  
         // stage ('Push to JFrog') {
         //     steps {
         //         script {
