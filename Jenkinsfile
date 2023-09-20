@@ -47,17 +47,18 @@ pipeline {
         //     }  
         // }
 
-        // stage ('Push to dockerhub') {
-        //     steps {
-        //         script {
-        //             echo 'Pushing to dockerhub'
-        //             withCredentials([usernamePassword(credentialsId: 'dockerhub-credentials', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        //                     sh "echo $PASS | docker login -u $USER --password-stdin"
-        //                     sh "docker push shivanishivani/clinic09:$BUILD_NUMBER"
-        //               }
-        //         }
-        //     }  
-        // }
+        stage ('Push to dockerhub') {
+            steps {
+                script {
+                    echo 'Pushing to dockerhub'
+                         withCredentials([usernamePassword(credentialsId: 'docker-creds', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
+                            sh "echo $PASS | docker login -u $USER --password-stdin"
+                            sh "docker push dangeo36/part2_petclinic:$BUILD_NUMBER"
+                      }
+
+                }
+            }  
+        }
         
     }
 }
