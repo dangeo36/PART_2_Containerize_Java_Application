@@ -34,18 +34,7 @@ pipeline {
                      }
                 }
         }  
-        // stage ('Push to JFrog') {
-        //     steps {
-        //         script {
-        //             echo 'Pushing to JFrog'
-        //             withCredentials([usernamePassword(credentialsId: 'jfrog-credentials2', passwordVariable: 'PASS', usernameVariable: 'USER')]) {
-        //                     sh "docker tag shivanishivani/clinic09:$BUILD_NUMBER dinesh1989.jfrog.io/docker-local/shivanishivani/clinic09:$BUILD_NUMBER"
-        //                     sh "echo $PASS | docker login -u $USER --password-stdin"
-        //                     sh "docker push dinesh1989.jfrog.io/docker-local/shivanishivani/clinic09:$BUILD_NUMBER"
-        //               }
-        //         }
-        //     }  
-        // }
+
 
         stage ('Push to dockerhub') {
             steps {
