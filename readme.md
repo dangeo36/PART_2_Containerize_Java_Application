@@ -1,4 +1,4 @@
-# ArgoCD  
+# Containerize Java Application
 
 The goal of this project is to build a secure 3-tier application and deploy to AWS with resusable code (Terraform and Packer). First, we create a custom, golden ami using Packer. The image will be provisioned with all necessary dependencies. This image will be used later once we containerize our application. We'll take a Java Springboot application called PetClinic and containerize it with a Dockerfile. The image will be pushed to Dockerhub and referenced in the final stage. Finally, we use Terrform to provision all our infrastructure; custom VPC, instances, load balancers, SSL certificates, RDS, etc and run our image in it. The application should be secure in a 3-tier architecture (more details in part 3).
 
