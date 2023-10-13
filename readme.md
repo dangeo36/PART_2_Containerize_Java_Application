@@ -9,7 +9,9 @@ For this part of the project, we will be using Jenkins to build out a CI pipelin
 - Use Sonarcloud.io to scan for vulnerablities in src code
 - Build artifact with mvn clean install and activate mysql profile
 - Build Docker Image
-- Push Image to DockerHub 
+- Push Image to DockerHub
+
+Part 3 GitHub Repo: https://github.com/dangeo36/PART_3_Deploy_Infra_With_Terraform.git 
 
 
 ## Building the local artifact and accessing it from localhost 
